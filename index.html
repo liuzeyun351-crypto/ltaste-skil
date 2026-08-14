@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>客户声音洞察看板</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="客户声音洞察看板首页">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">客户声音洞察看板</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#overview" class="nav__item nav__item--active">洞察分析</a>
+      <a href="#detail" class="nav__item">规则配置</a>
+    </nav>
+    <div class="userbar">
+      <span class="avatar" aria-hidden="true">用</span>
+      <span>欢迎您，运营专员</span>
+      <button class="icon-button" aria-label="退出登录">↗</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="filter-card" aria-label="筛选条件">
+      <label>日期 <select aria-label="开始日期"><option>2026-06-01</option></select></label>
+      <label class="date-end"><span>-</span><select aria-label="结束日期"><option>2026-06-30</option></select></label>
+      <label>渠道 <select><option>全部</option><option>自助渠道</option><option>人工服务</option></select></label>
+      <label>部门 <select><option>客户服务中心</option><option>技术支持组</option><option>数据运营组</option></select></label>
+      <label>场景 <select><option>全部</option><option>账单业务</option><option>还款业务</option></select></label>
+      <label>问题细项 <select><option>全部</option><option>服务态度</option><option>处理时效</option></select></label>
+      <button class="button button--primary">查询</button>
+    </section>
+
+    <section class="hero-grid" id="overview">
+      <article class="card chart-card chart-card--bars" aria-labelledby="bar-title">
+        <div class="card__head">
+          <div class="segmented" role="tablist" aria-label="趋势周期">
+            <button class="segmented__item segmented__item--active" role="tab" aria-selected="true">日线</button>
+            <button class="segmented__item" role="tab" aria-selected="false">周线</button>
+            <button class="segmented__item" role="tab" aria-selected="false">月线</button>
+          </div>
+          <button class="button button--secondary button--small">⇩ 下载</button>
+        </div>
+        <h1 class="sr-only" id="bar-title">六月投诉量趋势</h1>
+        <div class="legend" aria-label="图例">
+          <span><i class="c-blue"></i>自助渠道</span>
+          <span><i class="c-sky"></i>人工服务</span>
+          <span><i class="c-purple"></i>升级投诉</span>
+          <span><i class="c-gray"></i>其他入口</span>
+        </div>
+        <div class="bar-chart" aria-label="六月投诉量堆叠柱状图">
+          <span class="axis-title">数量（件）</span>
+          <span class="x-title">日期（日）</span>
+          <div class="gridline g1"></div><div class="gridline g2"></div><div class="gridline g3"></div><div class="gridline g4"></div>
+          <div class="bars">
+            <b style="--h:82%;--s2:31%;--s3:8%"></b><b style="--h:78%;--s2:28%;--s3:9%"></b><b style="--h:73%;--s2:29%;--s3:7%"></b><b style="--h:75%;--s2:31%;--s3:7%"></b><b style="--h:68%;--s2:27%;--s3:8%"></b><b class="low" style="--h:18%"></b><b class="low" style="--h:13%"></b><b style="--h:69%;--s2:29%;--s3:7%"></b><b style="--h:74%;--s2:30%;--s3:6%"></b><b style="--h:67%;--s2:27%;--s3:8%"></b><b style="--h:62%;--s2:24%;--s3:7%"></b><b style="--h:64%;--s2:24%;--s3:8%"></b><b class="low" style="--h:16%"></b><b class="low" style="--h:18%"></b><b style="--h:82%;--s2:32%;--s3:8%"></b><b style="--h:77%;--s2:30%;--s3:8%"></b><b style="--h:79%;--s2:31%;--s3:8%"></b><b style="--h:72%;--s2:28%;--s3:7%"></b><b style="--h:58%;--s2:21%;--s3:6%"></b><b class="low" style="--h:13%"></b><b style="--h:76%;--s2:30%;--s3:7%"></b><b style="--h:81%;--s2:32%;--s3:8%"></b><b style="--h:78%;--s2:31%;--s3:7%"></b><b style="--h:74%;--s2:29%;--s3:7%"></b><b style="--h:69%;--s2:27%;--s3:7%"></b><b class="low" style="--h:16%"></b><b class="low" style="--h:14%"></b><b style="--h:83%;--s2:33%;--s3:7%"></b><b style="--h:87%;--s2:34%;--s3:8%"></b><b style="--h:78%;--s2:28%;--s3:8%"></b>
+          </div>
+          <div class="x-axis"><span>06-01</span><span>06-08</span><span>06-15</span><span>06-22</span><span>06-29</span></div>
+        </div>
+      </article>
+
+      <aside class="card overview-card" aria-labelledby="overview-title">
+        <h2 id="overview-title">整体概览</h2>
+        <div class="overview-art" aria-hidden="true"></div>
+        <div class="metric-grid">
+          <div><span>周期投诉总量</span><strong>57,542</strong><em class="up">↑ 10.5%</em></div>
+          <div><span>本月投诉总量</span><strong>4,142</strong><em class="up">↑ 10.5%</em></div>
+          <div><span>日均投诉量</span><strong>198</strong><em class="up">↑ 5.1%</em></div>
+          <div><span>环比增长率</span><strong class="danger">+12.5%</strong><em class="up">↑ 2.5%</em></div>
+        </div>
+        <p class="insight">本月客诉环比 <b>上升 12.5%</b>，主要增长来自<span>自助渠道</span>，建议重点关注。</p>
+      </aside>
+    </section>
+
+    <section class="card alert-card" aria-labelledby="alert-title">
+      <h2 id="alert-title">AI预警建议 <span>智能异常检测</span></h2>
+      <div class="alert-band">
+        <div class="alert-icon" aria-hidden="true">!</div>
+        <p>检测到 <b>停服恢复慢</b> 类投诉增长过快（<b>+30%</b>），建议立即优化客服培训流程。</p>
+        <div class="tags"><span class="tag tag--danger">紧急</span><span class="tag tag--warn">高优先级</span><span class="tag tag--info">重要关注</span></div>
+      </div>
+    </section>
+
+    <section class="card compare-card" aria-labelledby="compare-title">
+      <h2 id="compare-title">分项表现对比</h2>
+      <div class="mini-grid">
+        <article><h3>总量TOP3投诉类别</h3><div class="donut"><span>总量<br>1283</span></div><p><b class="red-dot"></b>频繁联系、骚扰 <em class="up">+11.5%</em></p><p><b class="orange-dot"></b>提及协商还款 <em class="orange">+7.5%</em></p><p><b class="blue-dot"></b>第三方催收 <em class="down">-8.4%</em></p></article>
+        <article><h3>增长最快投诉类型</h3><div class="trend-art trend-art--up"></div><p><b class="red-dot"></b>频繁联系、骚扰 <em class="up">+11.5%</em></p><p><b class="orange-dot"></b>提及协商还款 <em class="orange">+7.5%</em></p><p><b class="blue-dot"></b>态度恶劣、威胁恐吓 <em class="blue-text">+7.2%</em></p></article>
+        <article><h3>减少最快投诉类型</h3><div class="trend-art trend-art--down"></div><p><b class="green-dot"></b>承诺反馈前后不一致 <em class="down">-22.2%</em></p><p><b class="green-dot"></b>第三方催收 <em class="down">-8.4%</em></p><p><b class="green-dot"></b>其他 <em class="down">-1.1%</em></p></article>
+      </div>
+      <div class="table-wrap" tabindex="0" aria-label="分项表现数据表，可横向滚动">
+        <table>
+          <thead><tr><th>分项表现</th><th>t-1数量</th><th>环比</th><th>前7天数量</th><th>周环比</th><th>本月数量</th><th>月环比</th><th>当年数量</th><th>累计同比</th></tr></thead>
+          <tbody>
+            <tr><td>频繁联系、骚扰</td><td>32</td><td><span class="pill up">+18.5% ↑</span></td><td>192</td><td><span class="pill up">+15.5% ↑</span></td><td>2,315</td><td><span class="pill up">+8.8% ↑</span></td><td>14,680</td><td><span class="pill up">+11.5% ↑</span></td></tr>
+            <tr><td>提及协商还款</td><td>28</td><td><span class="pill up">+14.5% ↑</span></td><td>150</td><td><span class="pill up">+10.1% ↑</span></td><td>543</td><td><span class="pill up">+14.5% ↑</span></td><td>6,986</td><td><span class="pill up">+7.5% ↑</span></td></tr>
+            <tr><td>第三方催收</td><td>25</td><td><span class="pill down">-19.4% ↓</span></td><td>143</td><td><span class="pill down">-17.9% ↓</span></td><td>439</td><td><span class="pill up">+1.5% ↑</span></td><td>5,811</td><td><span class="pill down">-8.4% ↓</span></td></tr>
+            <tr><td>态度恶劣、威胁恐吓</td><td>17</td><td><span class="pill up">+22.5% ↑</span></td><td>112</td><td><span class="pill down">-6.1% ↓</span></td><td>421</td><td><span class="pill up">+2.5% ↑</span></td><td>5,532</td><td><span class="pill up">+7.2% ↑</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card line-card" aria-labelledby="line-title">
+      <div class="card__head"><h2 id="line-title">投诉类型趋势对比</h2><select aria-label="趋势时间范围"><option>近7天</option></select></div>
+      <div class="segmented segmented--inline"><button class="segmented__item segmented__item--active">按日趋势</button><button class="segmented__item">按周趋势</button><button class="segmented__item">按月趋势</button></div>
+      <div class="legend"><span><i class="c-red"></i>服务态度问题</span><span><i class="c-orange"></i>处理时效慢</span><span><i class="c-blue"></i>信息不准确</span><span><i class="c-green"></i>费用争议</span><span><i class="c-purple"></i>产品质量</span><span><i class="c-cyan"></i>配送延迟</span></div>
+      <div class="line-chart" aria-label="投诉类型趋势折线图"><svg viewBox="0 0 900 260" role="img"><g class="grid"><path d="M40 30H875M40 80H875M40 130H875M40 180H875M40 230H875"/></g><polyline class="line red" points="45,86 180,92 315,84 450,88 585,78 720,72 855,86"/><polyline class="line orange" points="45,112 180,104 315,118 450,124 585,108 720,122 855,114"/><polyline class="line blue" points="45,132 180,118 315,102 450,106 585,96 720,104 855,96"/><polyline class="line green" points="45,168 180,174 315,176 450,178 585,168 720,174 855,166"/><polyline class="line purple" points="45,146 180,140 315,154 450,142 585,140 720,136 855,124"/><polyline class="line cyan" points="45,152 180,150 315,138 450,164 585,154 720,152 855,146"/></svg><div class="x-axis"><span>06-01</span><span>06-02</span><span>06-03</span><span>06-04</span><span>06-05</span><span>06-06</span><span>06-07</span></div></div>
+    </section>
+
+    <section class="card detail-card" id="detail" aria-labelledby="detail-title">
+      <div class="detail-head"><h2 id="detail-title">投诉明细</h2><div><label>日期 <select><option>2026-06-01</option></select></label><label>场景 <select><option>全部</option></select></label><label>问题类型 <select><option>全部</option></select></label><button class="button button--primary">查询</button></div></div>
+      <div class="table-wrap" tabindex="0" aria-label="投诉明细表，可横向滚动"><table><thead><tr><th>序号</th><th>场景</th><th>投诉编号</th><th>投诉时间</th><th>责任部门</th><th>问题类型</th><th>内容</th><th>操作</th></tr></thead><tbody><tr><td>1</td><td>账单业务</td><td>546242</td><td>2026-06-11 10:33:22</td><td>客服部</td><td>服务态度问题</td><td>用户反馈沟通不顺畅</td><td><button class="table-action">洞察详情</button></td></tr><tr><td>2</td><td>还款业务</td><td>546825</td><td>2026-06-11 10:33:22</td><td>技术部</td><td>处理时效慢</td><td>流程处理等待时间偏长</td><td><button class="table-action">洞察详情</button></td></tr><tr><td>3</td><td>账单业务</td><td>546858</td><td>2026-06-11 10:33:22</td><td>数据部</td><td>信息不准确</td><td>通知信息更新不及时</td><td><button class="table-action">洞察详情</button></td></tr><tr><td>4</td><td>还款业务</td><td>546343</td><td>2026-06-11 10:33:22</td><td>运营部</td><td>费用争议</td><td>账单费用解释不够清晰</td><td><button class="table-action">洞察详情</button></td></tr></tbody></table></div>
+      <div class="pagination" aria-label="分页"><button>‹</button><button>1</button><button>2</button><button class="active">3</button><span>…</span><button>50</button><button>›</button></div>
+    </section>
+  </main>
+</body>
+</html>
